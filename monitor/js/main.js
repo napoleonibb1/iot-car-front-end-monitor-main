@@ -9,7 +9,7 @@ axios.get('https://3.133.113.130/iot-car-control/back-end/apis/getRegistro.php')
   // manejar respuesta exitosa
   console.log(response);
 
-  let respuestaservidor = response.data == "w"?"ADELANTE":response.data == "s"?"ATRAS":response.data == "a"?"IZQUIERDA":response.data == "d"?"DERECHA": response.data == "p"?"PARAR":"LETRA NO CONOCIDA";
+  let respuestaservidor = response.data == "a"?"ADELANTE":response.data == "b"?"ATRAS":response.data == "c"?"IZQUIERDA":response.data == "d"?"DERECHA": response.data == "s"?"PARAR":"LETRA NO CONOCIDA";
   respuesta.innerHTML = "Respuesta: <strong>" +respuestaservidor;
 })
 .catch(function (error) {
